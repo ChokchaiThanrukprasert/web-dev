@@ -186,3 +186,16 @@ p#id-selector-2 {
 .zindex-bring-to-front {
   z-index: 10;
 }
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+  height: 100px;
+}
+
+.float-done {
+  clear: both;
+}
