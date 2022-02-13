@@ -91,3 +91,17 @@ p#id-selector-2 {
 .border-blue {
   border-color: #7070ff;
 }
+
+.padded-top-left {
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+.padded-bottom-right {
+  padding-bottom: 50px;
+  padding-right: 50px;
+}
+
+.padding-fat {
+  padding: 50px;
+}
