@@ -155,6 +155,10 @@ p#id-selector-2 {
   position: relative;
 }
 
+.min-height-150 {
+  height: 150px;
+}
+
 .pos-absolute-10-10 {
   position: absolute;
   top: 10px;
@@ -171,4 +175,10 @@ p#id-selector-2 {
   position: absolute;
   top: 20px;
   left: 120px;
+}
+
+.pos-fixed {
+  position: fixed;
+  right: 0;
+  bottom: 50%;
 }
