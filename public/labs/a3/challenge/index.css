@@ -3,3 +3,10 @@
   height: 250px;
   transform: rotate(90deg);
 }
+
+.rotate-list {
+  transform: rotate(12deg);
+  width: 100px;
+  background-color: red;
+  color: white;
+}
