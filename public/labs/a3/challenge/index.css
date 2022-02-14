@@ -10,3 +10,21 @@
   background-color: red;
   color: white;
 }
+
+.rotate-list-items li {
+  width: 100px;
+  text-align: right;
+}
+.rotate-list-items li:nth-child(1) {
+  transform: rotate(-10deg);
+  background-color: yellow;
+}
+.rotate-list-items li:nth-child(2) {
+  transform: rotate(2deg);
+  background-color: blue;
+  color: white;
+}
+.rotate-list-items li:nth-child(3) {
+  transform: rotate(10deg);
+  background-color: red;
+}
