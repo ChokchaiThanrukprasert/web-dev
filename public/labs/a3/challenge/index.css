@@ -210,3 +210,51 @@
     color: white;
   }
 }
+
+.wd-box-1 {
+  width: 100px;
+  height: 100px;
+  background-color: cornflowerblue;
+}
+
+.wd-box-2 {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+}
+
+.wd-box-3 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+}
+
+.wd-flex-start {
+  border: thick solid darkgray;
+  display: flex;
+  justify-content: start;
+}
+
+.wd-flex-center {
+  border: thick solid darkgray;
+  display: flex;
+  justify-content: center;
+}
+
+.wd-flex-end {
+  border: thick solid darkgray;
+  display: flex;
+  justify-content: end;
+}
+
+.wd-flex-space-around {
+  border: thick solid darkgray;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wd-flex-space-between {
+  border: thick solid darkgray;
+  display: flex;
+  justify-content: space-between;
+}
