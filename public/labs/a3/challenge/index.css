@@ -88,8 +88,7 @@
 }
 
 .gradients-positioned {
-  background:
-    radial-gradient(at top left, blue, red);
+  background: radial-gradient(at top left, blue, red);
   width: 200px;
   height: 200px;
   color: white;
@@ -219,13 +218,13 @@
 
 .wd-box-2 {
   width: 100px;
-  height: 100px;
+  height: 150px;
   background-color: pink;
 }
 
 .wd-box-3 {
   width: 100px;
-  height: 100px;
+  height: 200px;
   background-color: yellow;
 }
 
@@ -257,4 +256,80 @@
   border: thick solid darkgray;
   display: flex;
   justify-content: space-between;
+}
+
+.wd-flex-ver-flex-start {
+  border: thick solid darkgray;
+  display: flex;
+  align-items: flex-start;
+}
+
+.wd-flex-ver-center {
+  border: thick solid darkgray;
+  display: flex;
+  align-items: center;
+}
+
+.wd-flex-ver-flex-end {
+  border: thick solid darkgray;
+  display: flex;
+  align-items: flex-end;
+}
+
+.wd-flex {
+  display: flex;
+  border: thick solid darkgray;
+  height: 250px;
+}
+
+.wd-flex > .wd-flex-no-fill-container {
+  border: thick solid black;
+  background-color: gray;
+}
+
+.wd-flex > .wd-flex-fill-container {
+  flex-basis: 100%;
+  border: thick solid black;
+  background-color: gray;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .wd-media-menu-button {
+    display: block;
+  }
+
+  .wd-media-menu-bar {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .wd-media-menu-button {
+    display: none;
+  }
+
+  .wd-media-menu-bar {
+    border: thick solid gray;
+  }
+
+  .wd-media-menu-bar1 {
+    padding: 8px 0;
+    border-bottom: thick dashed gray;
+  }
+
+  .wd-media-menu-bar2 {
+    padding: 8px 0;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1800px) {
+  .wd-media-menu-button {
+    display: none;
+  }
+
+  .wd-media-menu-bar {
+    background-color: gray;
+    padding: 8px 0;
+    display: flex;
+  }
 }
