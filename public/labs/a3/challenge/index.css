@@ -32,3 +32,32 @@
 .rotate-image {
   transform: rotate(-10deg);
 }
+
+.rotate-table {
+  position: relative;
+  left: 50px;
+  transform: rotate(15deg);}
+.rotate-table tr:nth-child(1) {
+  background-color: black;
+  color: white;}
+.rotate-table tr:nth-child(n+2) {
+  background-color: yellow;}
+.rotate-table tr:nth-child(n+5) {
+  background-color: blue;
+  color: white;}
+.rotate-table tr:nth-child(n+8) {
+  background-color: red;}
+.rotate-table tr:nth-child(n+11) {
+  background-color: green;
+  color: white;
+}
+
+.gradients-linear {
+  background: linear-gradient(lightblue, orange);
+  width: 200px;
+}
+
+.gradients-radial {
+  background: radial-gradient(pink, cornflowerblue);
+  width: 200px;
+}
