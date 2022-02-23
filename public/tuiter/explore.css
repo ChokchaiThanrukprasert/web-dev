@@ -1,157 +1,117 @@
+/* Tuiter - Required for fixing image dimension */
+.wd-post-img {
+  width: 87px;
+  border-radius: 14px;
+}
+
+.wd-user-image {
+  width: 48px;
+  height: 48px;
+  border-radius: 24px;
+}
+
+/* Challenge - Override Bootstrap Section */
+/* Comment code below to show Tuiter section */
 body {
-  margin: 0 4px;
+  background-color: black;
+}
+
+.list-group-item-action.override-bs {
+  color: white;
+  background-color: black;
+  border-width: 0;
+}
+
+.list-group-item-action.active.override-bs {
+  color: white;
+  background-color: black;
+  border-width: 0;
+  font-weight: bolder;
+}
+
+.form-control.override-bs {
+  background-color: rgb(33, 35, 39);
+  border-width: 0;
+}
+
+.fa-magnifying-glass.override-bs {
+  color: rgb(110, 118, 125);
+}
+
+.fa-stack-1x.override-bs {
+  color: black;
+}
+
+.search-bar button .text-primary {
+  color: white !important;
+}
+
+.search-bar input {
+  color: white;
+}
+
+.search-bar input:focus {
+  color: white;
+}
+
+.nav-tabs.override-bs {
+  border-width: 0;
+}
+
+.nav-tabs .nav-link.override-bs {
+  color: rgb(110, 118, 125);
+}
+
+.nav-tabs .nav-link.active.override-bs {
+  border: 0;
+  border-bottom: 4px solid rgb(29, 161, 242);
   background-color: black;
   color: white;
-  border: 1px solid rgb(47, 51, 54);
-  font-size: 14px;
 }
 
-.wd-search-bar {
-  flex: auto;
-  display: flex;
-  align-items: center;
-  padding: 8px 8px;
-  background-color: darkgray;
-  border-radius: 24px;
-  margin-right: 32px;
+#navigation-tab.override-bs {
+  margin-bottom: 0 !important;
 }
 
-.wd-transparent-bg {
-  background-color: transparent;
+.main-content {
+  border-left: 1px solid rgb(47, 51, 54);
+  border-right: 1px solid rgb(47, 51, 54);
 }
 
-.wd-white-fg {
+.main-content li.list-group-item.override-bs {
+  background-color: black;
   color: white;
 }
 
-.wd-round-border {
-  border-radius: 16px
+.main-content li.list-group-item.override-bs .fa-inverse {
+  color: black !important;
 }
 
-.wd-icon-dimension {
-  width: 16px;
-  height: 16px;
+img.content {
+  border-top: 1px solid rgb(47, 51, 54);
+  border-bottom: 1px solid rgb(47, 51, 54);
 }
 
-.wd-no-boarder {
-  border-style: none;
+.search-bar {
+  padding: 0 1rem;
 }
 
-.wd-flex-horizontal {
-  display: flex;
-  align-items: center;
-  overflow-x: auto;
+#link-to-others li.list-group-item.override-bs {
+  background-color: rgb(22, 24, 28);
+  color: white !important;
 }
 
-.wd-flex-vertical {
-  display: flex;
-  flex-direction: column;
+#link-to-others li.list-group-item.override-bs .fa-inverse {
+  color: black !important;
 }
 
-.wd-padding-left-12 {
-  padding-left: 12px;
-}
-
-.wd-padding-left-16 {
-  padding-left: 16px;
-}
-
-.wd-padding-right-12 {
-  padding-right: 12px;
-}
-
-.wd-padding-right-16 {
-  padding-right: 16px;
-}
-
-.wd-padding-16 {
-  padding: 16px;
-}
-
-.wd-padding-top-8 {
-  padding-top: 8px;
-}
-
-.wd-padding-bottom-8 {
-  padding-bottom: 8px;
-}
-
-.wd-space-filler {
-  flex: auto;
-}
-
-.wd-bottom-border-thin {
-  border-bottom-width: thin;
-  border-bottom-style: solid;
-}
-
-.wd-bottom-border-thick {
-  border-bottom-width: thick;
-  border-bottom-style: solid;
-}
-
-.wd-border-primary-color {
-  border-color: rgb(47, 51, 54);
-}
-
-.wd-tab-button {
-  text-decoration: none;
-  padding: 16px;
-  font-weight: bold;
-  font-size: 15px;
+.wd-secondary-text {
   color: rgb(110, 118, 125);
 }
 
-.wd-tab-button-active {
-  border-bottom: 2px solid rgb(29, 161, 242);
-  color: rgb(29, 161, 242);
-  padding: 16px 0;
-  margin: 0 16px;
-}
-
-.wd-topic-label {
-  color: rgb(110, 118, 125);
-  font-size: 13px;
-  padding: 0;
-  margin: 0;
-}
-
-.wd-title-label {
-  color: white;
-  font-size: 13px;
+#link-to-others button.btn-primary {
+  color: black !important;
   font-weight: bold;
-  padding: 4px 0;
-  margin: 0;
-}
-
-.wd-tuit-count-label {
-  color: rgb(110, 118, 125);
-  font-size: 13px;
-  padding: 0;
-  margin: 0;
-}
-
-.wd-author-label {
-  color: white;
-  font-weight: bold;
-  padding: 0 4px;
-}
-
-.wd-author-pic-label {
-  border-radius: 6px;
-  width: 12px;
-  height: 12px;
-}
-
-.wd-post-block-pic {
-  width: 100px;
-  border-radius: 8px;
-}
-
-.wd-post-block {
-  display: flex;
-  padding: 12px 16px;
-  border-bottom-width: thin;
-  border-bottom-style: solid;
-  border-color: rgb(47, 51, 54);
+  background-color: white !important;
+  border-width: 0;
 }
