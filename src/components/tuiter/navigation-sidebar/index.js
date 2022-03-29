@@ -1,14 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 
 const NavigationSidebar = ({
                              active = 'explore'
                            }
 ) => {
-  const isActive = (link, active) => {
-    return (link === active) ? "active" : "";
-  }
-
   return (
     <>
       <div className="list-group">
@@ -17,63 +13,63 @@ const NavigationSidebar = ({
         </Link>
 
         {/* Home */}
-        <Link to="/tuiter/home"
-           className={`list-group-item list-group-item-action ${isActive('home', active)}`}>
+        <NavLink to="/tuiter" end
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-house-chimney"></i>
           <span className="d-none d-xl-inline ps-1">Home</span>
-        </Link>
+        </NavLink>
 
         {/* Explore */}
-        <Link to="/tuiter/explore"
-           className={`list-group-item list-group-item-action ${isActive('explore', active)}`}>
+        <NavLink to="/tuiter/explore"
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-hashtag"></i>
           <span className="d-none d-xl-inline ps-1">Explore</span>
-        </Link>
+        </NavLink>
 
         {/* Notifications */}
-        <Link to=""
-           className={`list-group-item list-group-item-action ${isActive('notifications', active)}`}>
+        <NavLink to="/tuiter/notifications"
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-bell"></i>
           <span className="d-none d-xl-inline ps-1">Notifications</span>
-        </Link>
+        </NavLink>
 
         {/* Messages */}
-        <Link to=""
-           className={`list-group-item list-group-item-action ${isActive('messages', active)}`}>
+        <NavLink to="/tuiter/messages"
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-envelope"></i>
           <span className="d-none d-xl-inline ps-1">Messages</span>
-        </Link>
+        </NavLink>
 
         {/* Bookmarks */}
-        <Link to=""
-           className={`list-group-item list-group-item-action ${isActive('bookmarks', active)}`}>
+        <NavLink to="/tuiter/bookmarks"
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-bookmark"></i>
           <span className="d-none d-xl-inline ps-1">Bookmarks</span>
-        </Link>
+        </NavLink>
 
         {/* Lists */}
-        <Link to=""
-           className={`list-group-item list-group-item-action ${isActive('lists', active)}`}>
+        <NavLink to="/tuiter/lists"
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-list"></i>
           <span className="d-none d-xl-inline ps-1">Lists</span>
-        </Link>
+        </NavLink>
 
         {/* Profile */}
-        <Link to=""
-           className={`list-group-item list-group-item-action ${isActive('profile', active)}`}>
+        <NavLink to="/tuiter/profile"
+           className="list-group-item list-group-item-action">
           <i className="fa-solid fa-user"></i>
           <span className="d-none d-xl-inline ps-1">Profile</span>
-        </Link>
+        </NavLink>
 
         {/* More */}
-        <Link to=""
-           className={`list-group-item list-group-item-action ${isActive('more', active)}`}>
+        <NavLink to="/tuiter/more"
+           className="list-group-item list-group-item-action">
                 <span className="fa-stack fa-2xs">
                   <i className="fa-solid fa-circle fa-stack-2x"></i>
                   <i className="fa-solid fa-ellipsis fa-stack-1x fa-inverse"></i>
                 </span>
           <span className="d-none d-xl-inline">More</span>
-        </Link>
+        </NavLink>
       </div>
 
       <div className="d-grid mt-2">

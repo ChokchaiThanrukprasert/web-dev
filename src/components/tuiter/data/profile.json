@@ -1,0 +1,15 @@
+{
+  "firstName": "Doggo",
+  "lastName": "Corgi",
+  "handle": "doggoCorgi",
+  "profilePicture": "/images/corgi.jpg",
+  "bannerPicture": "/images/dogs.jpg",
+  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate tincidunt erat.",
+  "website": "youtube.com/webdevtv",
+  "location": "Boston, MA",
+  "dateOfBirth": "2008-07-07",
+  "dateJoined": "2009-04",
+  "followingCount": 312,
+  "followersCount": 180,
+  "tuits": 5196
+}
