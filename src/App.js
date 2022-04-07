@@ -5,7 +5,7 @@ import './vendors/fontawesome/css/all.min.css';
 import HelloWorld from "./components/hello-world";
 import Labs from "./components/labs";
 import Tuiter from "./components/tuiter";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import HomeScreen from "./components/tuiter/home-screen";
 import ExploreScreen from "./components/tuiter/explore-screen";
 import ProfileScreen from "./components/tuiter/profile-screen";
@@ -18,7 +18,7 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index
-                   element={<Labs />} />
+                   element={<Navigate replace to="/tuiter" />} />
             <Route path="labs"
                    element={<Labs />} />
             <Route path="hello"

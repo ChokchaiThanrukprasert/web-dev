@@ -2,11 +2,11 @@ import React from "react";
 import "./tuit-list-item.css";
 import {useDispatch} from "react-redux";
 import TuitStats from "./tuit-stats";
+import {deleteTuit} from "../actions/tuits-actions";
 
 const TuitListItem = (args) => {
   const tuit = args.tuit;
   const dispatch = useDispatch();
-  const deleteTuit = tuit => dispatch({type: 'delete-tuit', tuit});
 
   return (
     <li className="list-group-item p-3">
@@ -22,20 +22,23 @@ const TuitListItem = (args) => {
           <div className="row">
             {/* Tuit poster */}
             <div className="col">
-              <span className="fw-bold">{tuit.postedBy.username}</span>
-              <span className="fa-stack fa-2xs">
-                <i className="fa-solid fa-circle fa-stack-2x"></i>
-                <i className="fa-solid fa-check fa-stack-1x fa-inverse text-black"></i>
-              </span>
+              <span className="fw-bold me-1">{tuit.postedBy.username}</span>
+              {
+                tuit.verified &&
+                (<span className="fa-stack fa-2xs me-1">
+                  <i className="fa-solid fa-circle fa-stack-2x"></i>
+                  <i className="fa-solid fa-check fa-stack-1x fa-inverse text-black"></i>
+                </span>)
+              }
               <span className="text-secondary">@{tuit.handle}</span>
             </div>
 
             {/* Delete tuit button*/}
             <div className="col-auto">
-              <button type="button" className="btn bg-transparent p-0" onClick={() => deleteTuit(tuit)}>
+              <button type="button" className="btn bg-transparent p-0" onClick={() =>
+                deleteTuit(dispatch, tuit)}>
                 <i className="fas fa-remove fa-1x"></i>
               </button>
-
             </div>
           </div>
 
@@ -58,7 +61,7 @@ const TuitListItem = (args) => {
             </div>}
 
           {/* Tuit status bar */}
-          <TuitStats tuit={tuit}/>
+          <TuitStats tuit={tuit} />
         </div>
       </div>
     </li>

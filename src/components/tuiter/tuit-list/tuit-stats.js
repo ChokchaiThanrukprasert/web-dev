@@ -1,38 +1,49 @@
 import React from "react";
 import {useDispatch} from "react-redux";
+import {updateTuit} from "../actions/tuits-actions";
 
 const TuitStats = ({tuit}) => {
   const dispatch = useDispatch();
-  const likeTuit = () => {
-    dispatch({type: 'like-tuit', tuit});
-    console.log("liked!");
-  };
+  const onlike = () => {
+    const prevStats = tuit.stats;
+    const newStats = {...prevStats, likes: prevStats.likes + 1};
+    updateTuit(dispatch, {...tuit, stats: newStats});
+  }
+
+  const onDislike = () => {
+    const prevStats = tuit.stats;
+    const newStats = {...prevStats, dislikes: prevStats.dislikes + 1};
+    updateTuit(dispatch, {...tuit, stats: newStats});
+  }
 
   return (
     <div className="row mt-3">
       {/* Comment */}
       <div className="col-3">
         <i className="fa-regular fa-comment me-2"></i>
-        {tuit.stats.comments}
+        {tuit.stats && tuit.stats.comments}
       </div>
 
       {/* Retweet */}
       <div className="col-3">
         <i className="fa-solid fa-retweet me-2"></i>
-        {tuit.stats.retuits}
+        {tuit.stats && tuit.stats.retuits}
       </div>
 
       {/* Like */}
       <div className="col-3">
-        <button className="btn bg-transparent p-0" onClick={likeTuit}>
-          <i className={"me-2 fa-heart " + (tuit.liked? "fa-solid text-danger":"fa-regular")}></i>
-          {tuit.stats.likes}
+        <button className="btn bg-transparent p-0 text-white" onClick={onlike}>
+          <i className="me-2 fa-regular fa-thumbs-up"></i>
+          {tuit.stats && tuit.stats.likes}
         </button>
       </div>
 
-      {/* Share */}
+      {/* Dislike */}
       <div className="col-3">
-        <i className="fa-solid fa-up-right-from-square"></i>
+        <button className="btn bg-transparent p-0 text-white" onClick={onDislike}>
+          <i className="me-2 fa-regular fa-thumbs-down"></i>
+          {tuit.stats && tuit.stats.dislikes}
+        </button>
       </div>
     </div>
   );
