@@ -6,7 +6,7 @@ const ExploreComponent = () => {
       <div className="row gx-3 mb-2">
         {/* Search box */}
         <div className="col position-relative">
-          <label for="search-box" className="position-absolute top-50 ms-4 translate-middle">
+          <label htmlFor="search-box" className="position-absolute top-50 ms-4 translate-middle">
             <i className="fa-solid fa-magnifying-glass"></i></label>
           <input type="text" id="search-box"
                  className="form-control rounded-pill ps-5"

@@ -18,6 +18,7 @@ const WhatsHappening = () => {
         {/* Textarea for posting new tuit */}
         <textarea className="form-control bg-black text-white"
                   placeholder="What's happening"
+                  value={whatsHappening.tuit}
                   onChange={(event) => setWhatsHappening({"tuit": event.target.value})}>
         </textarea>
 
@@ -43,7 +44,10 @@ const WhatsHappening = () => {
           {/* Tuit button */}
           <div className="col-auto">
             <button className="btn btn-primary rounded-pill"
-                    onClick={() => createTuit(dispatch, whatsHappening)}>
+                    onClick={() => {
+                      createTuit(dispatch, whatsHappening);
+                      setWhatsHappening({"tuit": ""});
+                    }}>
               Tuit
             </button>
           </div>

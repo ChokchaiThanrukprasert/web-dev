@@ -13,7 +13,7 @@ const TuitListItem = (args) => {
       <div className="row gx-3">
         {/* Poster avatar */}
         <div className="col-auto">
-          <img src={tuit["avatar-image"]}
+          <img src={tuit["avatar-image"] || "/images/avatar.png"}
                className="wd-user-image text-wrap"
                alt={tuit.postedBy.username} />
         </div>
